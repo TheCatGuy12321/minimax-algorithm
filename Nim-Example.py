@@ -1,5 +1,5 @@
 from minimax import Minimax, Node # import the minimax function and the Node data structure
-from multiprocessing import Process
+from time import sleep
 
 
 def get_tree(b, Myturn:bool):
@@ -66,11 +66,13 @@ def get_player_choice():
 def P1_wins():
     print(board)
     print("Player 1 wins!")
+    sleep(3)
     exit()
 
 def P2_wins():
     print(board)
     print("Player 2 wins!")
+    sleep(3)
     exit()
 
 def update_board(_player_choice, P1_turn):
