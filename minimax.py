@@ -17,7 +17,7 @@ def Minimax(root: Node, Maximising: bool, depth=0, alpha=-inf, beta=inf):
             alpha = max(alpha, bestVal)
             if beta <= alpha:
                 break
-        if bestVal >= 0: # if winning
+        if bestVal > 0: # if winning
             bestDepth = inf
             for i in data:
                 if i[0] == bestVal:
@@ -46,7 +46,7 @@ def Minimax(root: Node, Maximising: bool, depth=0, alpha=-inf, beta=inf):
             beta = min(beta, bestVal)
             if beta <= alpha:
                 break
-        if bestVal >= 0: # if winning for opponent
+        if bestVal <= 0: # if winning for opponent
             bestDepth = inf
             for i in data:
                 if i[0] == bestVal:

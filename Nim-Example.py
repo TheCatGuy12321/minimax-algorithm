@@ -31,9 +31,7 @@ def draw_tree(rootnode: Node):
 
 def calculate_position():
     root_node = get_tree(board, True)
-    print("Generated tree, starting calculation")
     best_move = Minimax(root_node, True)[1]
-    print("Finished calculation")
     return list(best_move)
 
 def get_board():
